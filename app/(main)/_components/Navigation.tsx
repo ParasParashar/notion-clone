@@ -62,7 +62,8 @@ const Navigation = () => {
     } else {
       resetWidth();
     }
-  }, [isMobile]);
+  }, []);
+
   useEffect(() => {
     if (isMobile) {
       collapse();
