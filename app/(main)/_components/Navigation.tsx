@@ -106,14 +106,9 @@ const Navigation = () => {
       setIsCollapse(false);
       setIsresetting(true);
       sidebarRef.current.style.width = isMobile ? "100%" : "240px";
-      navBarRef.current.style.setProperty(
-        "width",
-        isMobile ? "0" : "calc(100%-240px)"
-      );
-      navBarRef.current.style.setProperty(
-        "left",
-        isMobile ? "100%" : "calc(100%-240px)"
-      );
+      navBarRef.current.style.width = isMobile ? "100%" : "calc(100% - 240px)";
+      navBarRef.current.style.left = isMobile ? "0" : "240px";
+
       setTimeout(() => {
         setIsresetting(false);
       }, 300);
